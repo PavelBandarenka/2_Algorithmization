@@ -9,28 +9,29 @@ public class Task_1_elementsSum {
 
     public static void main(String[] args) {
 
-        int n;
+        int naturalNumberQuantity;
         int k;
-        int[] testArray;
-        int Sum;
+        int[] arrayA;
+        int naturalNumbersSum;
 
-        n = 14;
+        naturalNumberQuantity = 14;
         k = 3;
-        testArray = new int[n];
-        Sum = 0;
+        arrayA = new int[naturalNumberQuantity];
+        naturalNumbersSum = 0;
 
         System.out.println("Array of integers");
-        for (int i = 0; i < testArray.length; i++) {
-            testArray[i] = i + 1;
-            System.out.print(testArray[i] + " ");
+        for (int i = 0; i < arrayA.length; i++) {
+            arrayA[i] = i + 1;
+            System.out.print(arrayA[i] + " ");
         }
+
         System.out.println("\nMultiples of " + k + " :");
-        for (int i = 0; i < testArray.length; i++) {
+        for (int i = 0; i < arrayA.length; i++) {
             if ((i+1) % k == 0) {
                 System.out.print((i+1) + " ");
-                Sum = Sum + (i+1);
+                naturalNumbersSum = naturalNumbersSum + (i+1);
             }
         }
-        System.out.println("\nSum of multiples: \n" + Sum);
+        System.out.println("\nnaturalNumbersSum of multiples: \n" + naturalNumbersSum);
     }
 }
