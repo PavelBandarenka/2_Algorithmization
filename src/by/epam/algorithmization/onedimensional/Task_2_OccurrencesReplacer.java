@@ -24,11 +24,14 @@ public class Task_2_OccurrencesReplacer {
 
         System.out.println("Z = " + z);
         System.out.println("Sequence of real numbers: ");
+
+        //dynamic array filling
         for (int i = 0; i < testArray.length; i++) {
             testArray[i] = Math.ceil(randomArrayValues.nextDouble() * (10 - 1) + 1);
             System.out.print(testArray[i] + ", ");
 
         }
+        //make replacements
         System.out.println("\nReplacements: ");
         for (int i = 0; i < testArray.length; i++) {
             if (testArray[i] > z) {
@@ -36,9 +39,8 @@ public class Task_2_OccurrencesReplacer {
                 replacements++;
             }
         }
-
         for (double v : testArray) System.out.print(v + ", ");
-
+        //print replacements
         System.out.println("\nNumber of replacements:  " + replacements);
     }
 }

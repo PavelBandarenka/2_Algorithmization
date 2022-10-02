@@ -25,17 +25,22 @@ public class Task_3_ElementsCounter {
 
         Random randomArrayValues = new Random();
 
+        //dynamic array filling
         System.out.println("Array of real numbers: (lenght = " + arrayLength + " units)");
         for (int i = 1; i < testArray.length; i++) {
             testArray[i] = Math.ceil(randomArrayValues.nextDouble() * (10 - (-10)) + (-10));
-            if (testArray[i] > 0)
-                positiveCounter++;
-            else if (testArray[i] < 0)
-                negativeCounter++;
-            else if (testArray[i] == 0)
-                zeroValueCounter++;
-            System.out.print(testArray[i] + " ");
         }
+
+        //count
+        for(double d :testArray){
+            if (d > 0) {
+                positiveCounter++;
+            } else if (d < 0) {
+                negativeCounter++;
+            } else zeroValueCounter++;
+            System.out.print(d + " ");
+        }
+        //print result
         System.out.println("\nPositive elements = " + positiveCounter + "\nNegative elements = "
                            + negativeCounter + "\nZero value = " + zeroValueCounter);
     }
